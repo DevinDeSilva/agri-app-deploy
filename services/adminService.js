@@ -21,7 +21,7 @@ class AdminService{
         //num complains
         const num_complains =  await Complains.getCount();
 
-        const systemInfo ={
+        let systemInfo ={
             num_buyers:num_buyers,
             num_farmers:num_farmers,
             num_active_posts:num_active_posts,
@@ -30,6 +30,18 @@ class AdminService{
             num_buyer_reqs:num_buyer_reqs,
             num_complains:num_complains
         }
+      //  console.log(systemInfo);
+
+     //   systemInfo = {
+     //       num_buyers: [ { count: 9 }],
+     //   num_farmers: [ { count: 7 }],
+      //  num_active_posts: [ { count: 12 }],
+     //   num_expired_posts: [ { count: 3 }],
+     //   num_sold_posts: [ { count: 5 }],
+     //   num_buyer_reqs: [ { count: 6 }],
+     //   num_complains: [ { count:1 }]
+    //}
+
 
         return systemInfo;
 
